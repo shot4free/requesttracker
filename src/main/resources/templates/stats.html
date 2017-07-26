@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.springframework.org/schema/mvc">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Title</title>
+
+    <script type="text/javascript" th:src="@{/jquery.js}"></script>
+    <script type="text/javascript" th:src="@{/stats.js}"></script>
+
+    <script type="text/javascript">
+        window.onload = function() {
+            getStats();
+        };
+    </script>
+
+    </head>
+<body>
+This application counts http requests to itself. You can press button to recalculate quantity. Application uses statistics from period of 10 min.<br/>
+
+<input type="button" id="inputGetStats" name="inputGetStats" onclick="getStats();" value="Recalculate" /><br/>
+<input type="text" id="statsValuePerSecond" name="statsValuePerSecond" />
+
+</body>
+</html>
